@@ -150,6 +150,9 @@ body {
   color:#777;
 }
 
+
+/* button hover animation */
+
 /* .btn::after {
   content: "";
   display: inline-block;
@@ -174,5 +177,7 @@ body {
 
 .btn-animated {
   animation: moveInBottom .5s ease-out .5s;
+
+  /* first @keyframes rule is applied before animation starts*/
   animation-fill-mode: backwards;
 }

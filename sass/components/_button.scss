@@ -8,16 +8,16 @@
     border-radius: 10rem;
     transition: all .2s;
     position: relative;
-    font-size: 1.6rem;
+    font-size: $default-font-size;
   }
   &:hover {
-    transform: translateY(-.3rem);
-    box-shadow: 0 1rem 2rem rgba($color-black, .2);
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
   }
   
   &:active {
-    transform: translateY(.1rem);
-    box-shadow: 0 .6rem 1.2rem rgba($color-black, .2);
+    transform: translateY(0.1rem);
+    box-shadow: 0 0.6rem 1.2rem rgba($color-black, 0.2);
   }
 }
 
@@ -31,6 +31,36 @@
 
   /* first @keyframes rule is applied before animation starts*/
   animation-fill-mode: backwards;
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    color: $color-primary;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.3rem;
+    border-bottom: 0.1rem solid $color-primary;
+    font-size: $default-font-size;
+    font-weight: 700;
+    transition: color .1s .1s, background-position .5s ease-out;
+
+    background: linear-gradient(to bottom, transparent 50%, rgba($color-primary, 0.9) 50%) top;
+    background-size: 100% 200%;
+
+  }
+  &:hover {
+    // background-color: $color-primary;
+    background-position: bottom;
+    color: $color-white;
+    box-shadow: 0 1rem 1.5rem rgba($color-black, 0.15);
+    // transform: translateY(-0.2rem);
+  }
+  
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+    transform: translateY(0.1rem);
+  }
 }
 
 // /* button hover animation */

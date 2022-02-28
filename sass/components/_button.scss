@@ -58,8 +58,7 @@
     background-position: bottom;
     color: $color-white;
     box-shadow: 0 1rem 1.5rem rgba($color-black, 0.15);
-    border-bottom: none;
-    margin-bottom: 0.1rem;
+    border-bottom: 0.1rem solid transparent;
   }
   
   &:active {

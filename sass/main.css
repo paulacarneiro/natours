@@ -697,57 +697,61 @@ body {
           filter: blur(3px) brightness(80%);
 }
 
-.section-about {
-  background-color: #f7f7f7;
-  padding: 15rem 10rem;
-  margin-top: -15vh;
-}
-
-.section-features {
-  padding: 10rem 5rem;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/nat-4.jpg);
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
-  background-size: cover;
-  -webkit-transform: skewY(-5deg);
-          transform: skewY(-5deg);
-  margin-top: -6rem;
-}
-
-.section-features > * {
-  -webkit-transform: skewY(5deg);
-          transform: skewY(5deg);
-}
-
-.section-tours {
-  background-color: #f7f7f7;
-  padding: 20rem 10rem 13rem 10rem;
-  margin-top: -6rem;
-}
-
-.section-stories {
+.footer {
+  background-color: #333;
   padding: 10rem 0;
-  position: relative;
+  font-size: 01rem;
+  color: #f7f7f7;
 }
 
-.section-book {
-  padding: 15rem 0;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#28b485));
-  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+.footer-logo {
+  width: 15rem;
+  height: auto;
 }
 
-.section-book .book {
-  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("../img/nat-10.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  border-radius: 0.3rem;
-  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
-  height: 55rem;
+.footer-navigation {
+  border-top: 0.1rem solid #777;
+  padding-top: 2rem;
+  display: inline-block;
 }
 
-.section-book .book-form {
-  width: 50%;
-  padding: 6rem;
+.footer-list {
+  list-style: none;
+}
+
+.footer-item {
+  display: inline-block;
+}
+
+.footer-item:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.footer-link {
+  display: inline-block;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.footer-link:link, .footer-link:visited {
+  color: #f7f7f7;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.footer-link:hover, .footer-link:active {
+  color: #55c57a;
+}
+
+.footer-copyright {
+  border-top: 0.1rem solid #777;
+  padding-top: 2rem;
+  width: 80%;
+  float: right;
+  text-align: center;
 }
 
 .row {
@@ -816,5 +820,58 @@ body {
 
 .header-logo {
   height: 3.5rem;
+}
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 15rem 10rem;
+  margin-top: -15vh;
+}
+
+.section-features {
+  padding: 10rem 5rem;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/nat-4.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
+  background-size: cover;
+  -webkit-transform: skewY(-5deg);
+          transform: skewY(-5deg);
+  margin-top: -6rem;
+}
+
+.section-features > * {
+  -webkit-transform: skewY(5deg);
+          transform: skewY(5deg);
+}
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 20rem 10rem 13rem 10rem;
+  margin-top: -6rem;
+}
+
+.section-stories {
+  padding: 10rem 0;
+  position: relative;
+}
+
+.section-book {
+  padding: 15rem 0;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#28b485));
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+}
+
+.section-book .book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("../img/nat-10.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 0.3rem;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  height: 55rem;
+}
+
+.section-book .book-form {
+  width: 50%;
+  padding: 6rem;
 }
 /*# sourceMappingURL=main.css.map */

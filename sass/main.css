@@ -189,31 +189,31 @@ body {
 }
 
 .u-center-text {
-  text-align: center;
+  text-align: center !important;
 }
 
 .u-margin-bottom-small {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem !important;
 }
 
 .u-margin-bottom-medium {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
 }
 
 .u-margin-bottom-big {
-  margin-bottom: 8rem;
+  margin-bottom: 8rem !important;
 }
 
 .u-margin-top-small {
-  margin-top: 1.5rem;
+  margin-top: 1.5rem !important;
 }
 
 .u-margin-top-medium {
-  margin-top: 4rem;
+  margin-top: 4rem !important;
 }
 
 .u-margin-top-big {
-  margin-top: 8rem;
+  margin-top: 8rem !important;
 }
 
 .bg-video {
@@ -233,7 +233,7 @@ body {
      object-fit: cover;
 }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -243,6 +243,8 @@ body {
   transition: all .2s;
   position: relative;
   font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -252,7 +254,8 @@ body {
           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
-.btn:active {
+.btn:active, .btn:focus {
+  outline: none;
   -webkit-transform: translateY(0.1rem);
           transform: translateY(0.1rem);
   -webkit-box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.2);
@@ -297,7 +300,8 @@ body {
   color: #fff;
   -webkit-box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.15);
           box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.15);
-  border-bottom: 0.1rem solid transparent;
+  border-bottom: none;
+  margin-bottom: 0.1rem;
 }
 
 .btn-text:active {
@@ -583,6 +587,41 @@ body {
   visibility: hidden;
   -webkit-transform: translateY(-4rem);
           transform: translateY(-4rem);
+}
+
+.form-radio-input {
+  display: none;
+}
+
+.form-radio-group {
+  width: 45%;
+  display: inline-block;
+}
+
+.form-radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4.5rem;
+}
+
+.form-radio-button {
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 50%;
+  background-color: transparent;
+  outline: 0.6rem solid #55c57a;
+  outline-offset: 0.4rem;
+  display: inline-block;
+  position: absolute;
+  left: 1rem;
+  top: 0.1rem;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+}
+
+.form-radio-input:checked + .form-radio-label > .form-radio-button {
+  background-color: #55c57a;
 }
 
 .story {

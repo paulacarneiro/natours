@@ -46,6 +46,41 @@
     opacity: 0;
     visibility: hidden;
     transform: translateY(-4rem);
-  }
+  } 
 
+
+  &-radio {
+    &-input {
+      display: none;
+    }
+    &-group {
+        width: 45%;
+        display: inline-block;
+      }
+
+      &-label {
+        font-size: $default-font-size;
+        cursor: pointer;
+        position: relative;
+        padding-left: 4.5rem;
+      }
+
+      &-button {
+        height: 1.6rem;
+        width: 1.6rem;
+        border-radius: 50%;
+        background-color: transparent;
+        outline: 0.6rem solid $color-primary; 
+        outline-offset: 0.4rem;
+        display: inline-block;
+        position: absolute;
+        left: 1rem;
+        top: 0.1rem;
+        transition: all .1s;
+      }
+
+      &-input:checked + &-label > &-button {
+        background-color: $color-primary;
+      }
+   }
 }

@@ -11,10 +11,7 @@
   visibility: hidden;
   
   &-content {
-    // @include absCenter;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    @include absCenter;
     background-color: $color-white;
     width: 75%;
     box-shadow: 0 2rem 4rem rgba($color-black, .2);

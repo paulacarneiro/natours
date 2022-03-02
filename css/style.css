@@ -98,25 +98,25 @@ body {
     margin-bottom: 3rem; }
 
 .u-center-text {
-  text-align: center; }
+  text-align: center !important; }
 
 .u-margin-bottom-small {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem !important; }
 
 .u-margin-bottom-medium {
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem !important; }
 
 .u-margin-bottom-big {
-  margin-bottom: 8rem; }
+  margin-bottom: 8rem !important; }
 
 .u-margin-top-small {
-  margin-top: 1.5rem; }
+  margin-top: 1.5rem !important; }
 
 .u-margin-top-medium {
-  margin-top: 4rem; }
+  margin-top: 4rem !important; }
 
 .u-margin-top-big {
-  margin-top: 8rem; }
+  margin-top: 8rem !important; }
 
 .bg-video {
   position: absolute;
@@ -131,7 +131,7 @@ body {
     height: 100%;
     object-fit: cover; }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -139,13 +139,16 @@ body {
   border-radius: 10rem;
   transition: all .2s;
   position: relative;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer; }
 
 .btn:hover {
   transform: translateY(-0.3rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
-.btn:active {
+.btn:active, .btn:focus {
+  outline: none;
   transform: translateY(0.1rem);
   box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.2); }
 
@@ -178,7 +181,8 @@ body {
   background-position: bottom;
   color: #fff;
   box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.15);
-  border-bottom: 0.1rem solid transparent; }
+  border-bottom: none;
+  margin-bottom: 0.1rem; }
 
 .btn-text:active {
   box-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.15);
@@ -317,7 +321,7 @@ body {
     transform: translateY(-1.5rem) scale(1.03); }
 
 .form-group:not(:last-child) {
-  margin-bottom: 3rem; }
+  margin-bottom: 2rem; }
 
 .form-input {
   font-size: 1.5rem;
@@ -350,21 +354,21 @@ body {
 
 .form-input:placeholder-shown + .form-label {
   opacity: 0;
-  display: none;
+  visibility: hidden;
   transform: translateY(-4rem); }
 
 .form-radio-input {
-  visibility: hidden; }
+  display: none; }
 
 .form-radio-group {
-  width: 49%;
+  width: 45%;
   display: inline-block; }
 
 .form-radio-label {
   font-size: 1.6rem;
   cursor: pointer;
   position: relative;
-  padding-left: 3rem; }
+  padding-left: 4.5rem; }
 
 .form-radio-button {
   height: 1.6rem;
@@ -375,7 +379,7 @@ body {
   outline-offset: 0.4rem;
   display: inline-block;
   position: absolute;
-  left: 0;
+  left: 1rem;
   top: 0.1rem;
   transition: all .1s; }
 
@@ -427,42 +431,41 @@ body {
     transform: translateX(-2rem) scale(1);
     filter: blur(3px) brightness(80%); }
 
-.section-about {
-  background-color: #f7f7f7;
-  padding: 15rem 10rem;
-  margin-top: -15vh; }
-
-.section-features {
-  padding: 10rem 5rem;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
-  background-size: cover;
-  transform: skewY(-5deg);
-  margin-top: -6rem; }
-  .section-features > * {
-    transform: skewY(5deg); }
-
-.section-tours {
-  background-color: #f7f7f7;
-  padding: 20rem 10rem 13rem 10rem;
-  margin-top: -6rem; }
-
-.section-stories {
+.footer {
+  background-color: #333;
   padding: 10rem 0;
-  position: relative; }
-
-.section-book {
-  padding: 15rem 0;
-  background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
-  .section-book .book {
-    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("../img/nat-10.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    border-radius: 0.3rem;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
-    height: 55rem; }
-    .section-book .book-form {
-      width: 50%;
-      padding: 6rem; }
+  font-size: 01rem;
+  color: #f7f7f7; }
+  .footer-logo {
+    width: 15rem;
+    height: auto; }
+  .footer-navigation {
+    border-top: 0.1rem solid #777;
+    padding-top: 2rem;
+    display: inline-block; }
+  .footer-list {
+    list-style: none; }
+  .footer-item {
+    display: inline-block; }
+    .footer-item:not(:last-child) {
+      margin-right: 1.5rem; }
+  .footer-link {
+    display: inline-block;
+    backface-visibility: hidden;
+    transition: all 0.3s; }
+    .footer-link:link, .footer-link:visited {
+      color: #f7f7f7;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block; }
+    .footer-link:hover, .footer-link:active {
+      color: #55c57a; }
+  .footer-copyright {
+    border-top: 0.1rem solid #777;
+    padding-top: 2rem;
+    width: 80%;
+    float: right;
+    text-align: center; }
 
 .row {
   max-width: 114rem;
@@ -503,3 +506,152 @@ body {
     left: 3rem; }
   .header-logo {
     height: 3.5rem; }
+
+.navigation-checkbox {
+  display: none; }
+
+.navigation-button {
+  background-color: #fff;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 3rem;
+  right: 4rem;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2); }
+
+.navigation-background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 3.5rem;
+  right: 4.5rem;
+  background-image: radial-gradient(#7ed56f, #28b485);
+  z-index: 1000;
+  transition: transform 0.7s cubic-bezier(0.86, 0, 0.07, 1); }
+
+.navigation-nav {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  opacity: 0;
+  width: 0;
+  transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+
+.navigation-list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%; }
+
+.navigation-item {
+  margin: 1rem; }
+
+.navigation-link:link, .navigation-link:visited {
+  display: inline-block;
+  color: #fff;
+  font-size: 3rem;
+  padding: 1rem 2rem;
+  font-weight: 300;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 240%;
+  transition: all .4s; }
+
+.navigation-link:hover, .navigation-link:active {
+  color: #55c57a;
+  background-position: 100%;
+  transform: translateX(1rem); }
+
+.navigation-link span {
+  margin-right: 2rem;
+  display: inline-block; }
+
+.navigation-checkbox:checked ~ .navigation-background {
+  transform: scale(80); }
+
+.navigation-checkbox:checked ~ .navigation-nav {
+  opacity: 1;
+  width: 100%; }
+
+.navigation-icon {
+  position: relative;
+  top: 3.4rem;
+  left: 2rem; }
+  .navigation-icon, .navigation-icon::before, .navigation-icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: #333;
+    display: block; }
+  .navigation-icon::before, .navigation-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s; }
+  .navigation-icon::before {
+    top: -0.8rem; }
+  .navigation-icon::after {
+    top: 0.8rem; }
+
+.navigation-button:hover .navigation-icon::before {
+  top: -1rem; }
+
+.navigation-button:hover .navigation-icon::after {
+  top: 1rem; }
+
+.navigation-checkbox:checked + .navigation-button .navigation-icon {
+  background-color: transparent; }
+
+.navigation-checkbox:checked + .navigation-button .navigation-icon::before {
+  top: 0;
+  transform: rotate(135deg); }
+
+.navigation-checkbox:checked + .navigation-button .navigation-icon::after {
+  top: 0;
+  transform: rotate(-135deg); }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 15rem 10rem;
+  margin-top: -15vh; }
+
+.section-features {
+  padding: 10rem 5rem;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
+  background-size: cover;
+  transform: skewY(-5deg);
+  margin-top: -6rem; }
+  .section-features > * {
+    transform: skewY(5deg); }
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 20rem 10rem 13rem 10rem;
+  margin-top: -6rem; }
+
+.section-stories {
+  padding: 10rem 0;
+  position: relative; }
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+  .section-book .book {
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("../img/nat-10.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 0.3rem;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+    height: 55rem; }
+    .section-book .book-form {
+      width: 50%;
+      padding: 6rem; }

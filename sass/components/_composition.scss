@@ -1,7 +1,7 @@
 .composition {
   position: relative;
   
-  top: 5rem;
+  top: 3rem;
   // left: 2rem;
 
   &-image {
@@ -12,26 +12,48 @@
     transition: all .1s;
     outline-offset: 2rem;
 
+    @include respond(tab-port) {
+      float: left;
+      position: relative;
+      width: calc(100%/3);
+      box-shadow: 0 1.5rem 3rem rgba($color-black, 0.4);
+    }
+
     &-1 {
       left: 0;
       top: -4rem;
+
+      @include respond(tab-port) {
+        top: 0;
+        // left: 1rem;
+      }
     }
 
     &-2 {
       right: 0;
       top: 0;
+
+      @include respond(tab-port) {
+        top: -1rem;
+        left: 1rem;
+      }
     }
 
     &-3 {
        left: 6rem;
        top: 6rem;
+
+       @include respond(tab-port) {
+        top: 0;
+        left: 2rem;
+      }
     }
 
     &:hover {
       outline: 1.5rem solid $color-primary;
       z-index: 20;
       transform: scale(1.05) translateY(-0.5rem);
-     box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
     }
   }
 

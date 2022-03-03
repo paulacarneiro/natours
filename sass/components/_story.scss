@@ -8,8 +8,23 @@
   font-size: $default-font-size;
   transform: skewX(-7deg);
 
+  @include respond(tab-port) {
+    max-width: 100%;
+    width: 100%;
+    padding: 4rem;
+  }
+
+  @include respond(phone) {
+    transform: skewX(0);
+  }
+
   & > * {
     transform: skewX(7deg);
+
+    @include respond(phone) {
+      transform: skewX(0);
+    }
+  
   }
 
   &-author {
@@ -23,6 +38,10 @@
 
     // fix: lines appearing around the edges of .story-author
     overflow: hidden;
+
+    @include respond(phone) {
+      transform: translateX(-2rem) skewX(0);
+    }
 
     &-image {
       height:100%;

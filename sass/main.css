@@ -163,7 +163,7 @@ body {
   color: #fff;
   text-transform: uppercase;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   margin-bottom: 6rem;
 }
 
@@ -206,8 +206,8 @@ body {
   padding: 0 2rem 0;
   background-image: -webkit-gradient(linear, left top, right top, from(#7ed56f), to(#28b485));
   background-image: linear-gradient(to right, #7ed56f, #28b485);
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   letter-spacing: .2rem;
   -webkit-transition: all .2s;
@@ -1035,7 +1035,7 @@ body {
   -webkit-transform: translateX(-2rem) scale(1.2);
           transform: translateX(-2rem) scale(1.2);
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
@@ -1118,7 +1118,7 @@ body {
 .footer-link {
   display: inline-block;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }

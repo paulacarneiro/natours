@@ -51,6 +51,8 @@
     &-image {
       height:100%;
       transform: translateX(-2rem) scale(1.2);
+      -moz-backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       transition: all .5s;
     }

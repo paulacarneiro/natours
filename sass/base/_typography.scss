@@ -7,7 +7,8 @@
 .heading-primary {
   color: $color-white;
   text-transform: uppercase;
-
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   margin-bottom: 6rem;
 
@@ -44,8 +45,9 @@
   display: inline-block;
   padding: 0 2rem 0;
   background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-  background-clip: text;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
   color: transparent;
   letter-spacing: .2rem;
   transition: all .2s;

@@ -38,6 +38,8 @@
 
   &-link {
     display: inline-block;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transition: all 0.3s;
 

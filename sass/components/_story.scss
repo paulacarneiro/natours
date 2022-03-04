@@ -31,13 +31,18 @@
     width: 15rem;
     height: 15rem;
     float: left;
-    shape-outside: circle(50%);
-    clip-path: circle(50%);
     transform: translateX(-2rem) skewX(7deg);
     position: relative;
 
-    // fix: lines appearing around the edges of .story-author
+    // fix: lines appearing around the edges of author picture (.story-author)
     overflow: hidden;
+    border-radius: 50%;
+
+    @supports (clip-path: polygon(0 0)){
+      shape-outside: circle(50%);
+      clip-path: circle(50%);
+      border-radius: none;
+    }
 
     @include respond(phone) {
       transform: translateX(-2rem) skewX(0);

@@ -203,6 +203,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
+  padding: 0 2rem 0;
   background-image: -webkit-gradient(linear, left top, right top, from(#7ed56f), to(#28b485));
   background-image: linear-gradient(to right, #7ed56f, #28b485);
   background-clip: text;
@@ -817,6 +818,16 @@ body {
   z-index: 3000;
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+@supports (-webkit-backdrop-filter: blur(10px)) and ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+  .popup {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .popup-content {
@@ -973,13 +984,20 @@ body {
   width: 15rem;
   height: 15rem;
   float: left;
-  shape-outside: circle(50%);
-  -webkit-clip-path: circle(50%);
-          clip-path: circle(50%);
   -webkit-transform: translateX(-2rem) skewX(7deg);
           transform: translateX(-2rem) skewX(7deg);
   position: relative;
   overflow: hidden;
+  border-radius: 50%;
+}
+
+@supports ((-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0))) {
+  .story-author {
+    shape-outside: circle(50%);
+    -webkit-clip-path: circle(50%);
+            clip-path: circle(50%);
+    border-radius: none;
+  }
 }
 
 @media (max-width: 37.5em) {
@@ -1188,11 +1206,16 @@ body {
   background-size: cover;
   background-position: top;
   position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
 }
 
-@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+@supports ((-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0))) {
+  .header {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-resolution: 192dpi) and (min-width: 37.5em), (-webkit-min-devide-pixel-ratio: 2) and (min-width: 37.5em), (min-width: 125em) {
   .header {
     background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/hero.jpg);
     background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);

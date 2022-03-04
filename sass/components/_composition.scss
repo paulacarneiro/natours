@@ -10,7 +10,6 @@
     position: absolute;
     z-index: 10;
     transition: all .1s;
-    outline-offset: 2rem;
 
     @include respond(tab-port) {
       float: left;
@@ -49,16 +48,21 @@
       }
     }
 
-    &:hover {
-      outline: 1.5rem solid $color-primary;
-      z-index: 20;
-      transform: scale(1.05) translateY(-0.5rem);
-      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
-    }
+    @media (hover: hover) {
+      &:hover {
+        outline: 1.5rem solid $color-primary;
+        outline-offset: 2rem;
+        z-index: 20;
+        transform: scale(1.05) translateY(-0.5rem);
+        box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+      }
+    } 
   }
 
-  // when .composition is hovered, select images that are not hovered
-  &:hover &-image:not(:hover) {
-    transform: scale(.85);
+  @media (hover: hover) {
+    // when .composition is hovered, select images that are not hovered
+    &:hover &-image:not(:hover) {
+      transform: scale(.85);
+    }
   }
 }

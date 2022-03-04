@@ -25,7 +25,9 @@
     }
   }
 
-  &:hover {
-    transform: translateY(-1.5rem) scale(1.03);
-  }  
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-1.5rem) scale(1.03);
+    }  
+  }
 }

@@ -226,11 +226,13 @@ body {
   }
 }
 
-.heading-secondary:hover {
-  -webkit-transition: scale(1.2);
-  transition: scale(1.2);
-  letter-spacing: 0.3rem;
-  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+@media (hover: hover) {
+  .heading-secondary:hover {
+    -webkit-transition: scale(1.2);
+    transition: scale(1.2);
+    letter-spacing: 0.3rem;
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
 }
 
 .heading-tertiary {
@@ -307,11 +309,13 @@ body {
   cursor: pointer;
 }
 
-.btn:hover {
-  -webkit-transform: translateY(-0.3rem);
-          transform: translateY(-0.3rem);
-  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+@media (hover: hover) {
+  .btn:hover {
+    -webkit-transform: translateY(-0.3rem);
+            transform: translateY(-0.3rem);
+    -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
 }
 
 .btn:active, .btn:focus {
@@ -355,13 +359,15 @@ body {
   background-size: 200% 200%;
 }
 
-.btn-text:hover {
-  background-position: bottom;
-  color: #fff;
-  -webkit-box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.15);
-  border-bottom: none;
-  margin-bottom: 0.1rem;
+@media (hover: hover) {
+  .btn-text:hover {
+    background-position: bottom;
+    color: #fff;
+    -webkit-box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.15);
+            box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.15);
+    border-bottom: none;
+    margin-bottom: 0.1rem;
+  }
 }
 
 .btn-text:active {
@@ -523,7 +529,7 @@ body {
   font-weight: 100;
 }
 
-@media (max-width: 56.25em) {
+@media (max-width: 75em) {
   .card {
     height: auto;
     border-radius: 0.3rem;
@@ -605,7 +611,6 @@ body {
   z-index: 10;
   -webkit-transition: all .1s;
   transition: all .1s;
-  outline-offset: 2rem;
 }
 
 @media (max-width: 56.25em) {
@@ -653,18 +658,23 @@ body {
   }
 }
 
-.composition-image:hover {
-  outline: 1.5rem solid #55c57a;
-  z-index: 20;
-  -webkit-transform: scale(1.05) translateY(-0.5rem);
-          transform: scale(1.05) translateY(-0.5rem);
-  -webkit-box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
-          box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+@media (hover: hover) {
+  .composition-image:hover {
+    outline: 1.5rem solid #55c57a;
+    outline-offset: 2rem;
+    z-index: 20;
+    -webkit-transform: scale(1.05) translateY(-0.5rem);
+            transform: scale(1.05) translateY(-0.5rem);
+    -webkit-box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+  }
 }
 
-.composition:hover .composition-image:not(:hover) {
-  -webkit-transform: scale(0.85);
-          transform: scale(0.85);
+@media (hover: hover) {
+  .composition:hover .composition-image:not(:hover) {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
 }
 
 .feature-box {
@@ -704,9 +714,11 @@ body {
   }
 }
 
-.feature-box:hover {
-  -webkit-transform: translateY(-1.5rem) scale(1.03);
-          transform: translateY(-1.5rem) scale(1.03);
+@media (hover: hover) {
+  .feature-box:hover {
+    -webkit-transform: translateY(-1.5rem) scale(1.03);
+            transform: translateY(-1.5rem) scale(1.03);
+  }
 }
 
 .form-group:not(:last-child) {
@@ -1324,6 +1336,7 @@ body {
   top: 0;
   left: 0;
   z-index: 1500;
+  overflow: hidden;
   opacity: 0;
   width: 0;
   -webkit-transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);

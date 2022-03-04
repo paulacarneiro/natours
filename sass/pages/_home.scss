@@ -4,11 +4,11 @@
   margin-top: -15vh;
 
   @include respond(tab-land) {
-    margin-top: -20%;
+    margin-top: -17%;
   }
 
   @include respond(tab-port) {
-    padding: 15rem 0;
+    padding: 20rem 0;
   }
 }
 

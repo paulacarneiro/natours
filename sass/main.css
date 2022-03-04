@@ -1442,13 +1442,13 @@ body {
 
 @media (max-width: 75em) {
   .section-about {
-    margin-top: -20%;
+    margin-top: -17%;
   }
 }
 
 @media (max-width: 56.25em) {
   .section-about {
-    padding: 15rem 0;
+    padding: 20rem 0;
   }
 }
 

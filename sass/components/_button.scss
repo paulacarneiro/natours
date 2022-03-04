@@ -16,16 +16,22 @@
     cursor: pointer;
   }
 
-  &:hover {
-    transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-  }
-  
-  &:active,
-  &:focus {
-    outline: none;
-    transform: translateY(0.1rem);
+  @media (hover: none) {
     box-shadow: 0 0.6rem 1.2rem rgba($color-black, 0.2);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-0.3rem);
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+      transform: translateY(0.1rem);
+      box-shadow: 0 0.6rem 1.2rem rgba($color-black, 0.2);
+    }
   }
 
   &-white {
@@ -62,17 +68,20 @@
     background: linear-gradient(to bottom, transparent 50%, rgba($color-primary, 0.9) 50%) top;
     background-size: 200% 200%;
   }
-  &:hover {
-    background-position: bottom;
-    color: $color-white;
-    box-shadow: 0 1rem 1.5rem rgba($color-black, 0.15);
-    border-bottom: none;
-    margin-bottom: 0.1rem;
-  }
-  
-  &:active {
+
+  @media (hover: hover) {
+    &:hover {
+      background-position: bottom;
+      color: $color-white;
+      box-shadow: 0 1rem 1.5rem rgba($color-black, 0.15);
+      border-bottom: none;
+      margin-bottom: 0.1rem;
+    } 
+
+    &:active {
     box-shadow: 0 .5rem .6rem rgba($color-black, 0.15);
     transform: translateY(0.1rem);
+    }
   }
 }
 

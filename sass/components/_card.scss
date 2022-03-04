@@ -154,7 +154,7 @@
     font-weight: 100;
   }
 
-  @include respond(tab-port) {
+  @include respond(tab-land) {
     height: auto;
     border-radius: 0.3rem;
     background-color: $color-white;

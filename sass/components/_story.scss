@@ -38,8 +38,9 @@
     overflow: hidden;
     border-radius: 50%;
 
-    @supports (clip-path: polygon(0 0)){
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)){
       shape-outside: circle(50%);
+      -webkit-clip-path: circle(50%);
       clip-path: circle(50%);
       border-radius: none;
     }

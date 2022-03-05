@@ -48,7 +48,7 @@
       }
     }
 
-    @media (hover: hover) {
+    @media only screen and (hover: hover) {
       &:hover {
         outline: 1.5rem solid $color-primary;
         outline-offset: 2rem;
@@ -59,7 +59,7 @@
     } 
   }
 
-  @media (hover: hover) {
+  @media only screen and (hover: hover) {
     // when .composition is hovered, select images that are not hovered
     &:hover &-image:not(:hover) {
       transform: scale(.85);

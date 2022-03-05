@@ -16,11 +16,11 @@
     cursor: pointer;
   }
 
-  @media (hover: none) {
+  @media only screen and (hover: none) {
     box-shadow: 0 0.6rem 1.2rem rgba($color-black, 0.2);
   }
 
-  @media (hover: hover) {
+  @media only screen and (hover: hover) {
     &:hover {
       transform: translateY(-0.3rem);
       box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
@@ -71,7 +71,7 @@
     background-size: 200% 200%;
   }
 
-  @media (hover: hover) {
+  @media only screen and (hover: hover) {
     &:hover {
       background-position: bottom;
       color: $color-white;
